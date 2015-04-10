@@ -20,7 +20,7 @@ def genCombi(chain, stringMaxLen):
                 yield ''.join(i)
 
 
-with open('./%s_dico.txt' %(now), 'wb') as f:
+with open('./%s_wordlist.txt' %(now), 'wb') as f:
     wordlist = genCombi(chain, stringMaxLen)
     while wordlist != chain[-1]*(stringMaxLen):
         f.write('%s\n' %(wordlist.next()))
